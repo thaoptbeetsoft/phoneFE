@@ -1,0 +1,41 @@
+:root {
+    --color: #ee653c;
+}
+.chart-layout {
+    margin: 36px auto 0 auto;
+    padding: 32px 0;
+    height: 320px;
+    background-color: #fff;
+    display: flex;
+    align-items: flex-end;
+    /*chuyen cac dien tu start ve end*/
+    justify-content: space-around;
+}
+
+.chart-layout__item {
+    width: 60px;
+    color: #fff;
+    text-align: center;
+    height: var(--percent);
+    background-color: var(--color);
+    animation: growth ease-in 0.7s;
+    /* growth la ten ham, ease-in la kieu nhanh hay cham, 0,7 la trong time bao nhie*/
+
+}
+
+@keyframes growth {
+    from {
+        opacity: 0;
+        /*do trong suat luc dau*/
+        height: 0
+            /* chieu cao ban dau*/
+    }
+
+    to {
+        opacity: 1;
+        /*do trong xuat cuoi*/
+        height: var(--percent);
+        /*chieu cao cuoi*/
+    }
+
+}
