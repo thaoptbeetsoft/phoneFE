@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import AuthService from '../../service/AuthService';
+import "./Auth.css";
 type Props = {};
 type State = {
     username: string,
@@ -24,8 +25,8 @@ export default class Login extends Component<Props, State> {
 
     validationSchema() {
         return Yup.object().shape({
-            username: Yup.string().required("This field is required!"),
-            password: Yup.string().required("This field is required!")
+            username: Yup.string().required("Không được để trống!"),
+            password: Yup.string().required("Không được để trống!")
         });
     }
 
@@ -36,8 +37,8 @@ export default class Login extends Component<Props, State> {
             message: ""
         });
 
-        AuthService.login(username, password).then((response) => {
-            window.location.href = 'http://localhost:3000/list';
+        AuthService.signin(username, password).then((response) => {
+            window.location.href = 'http://localhost:3000';
             // let user: User;
             // let userJson: any;
             //   userJson = localStorage.getItem("user");
@@ -66,7 +67,7 @@ export default class Login extends Component<Props, State> {
             password: ''
         }
         return (
-            <section className="ftco-section">
+            <section className="ftco-section_singnin">
                 <div className="container">
                     <div className="row justify-content-center">
                     </div>
@@ -111,7 +112,7 @@ export default class Login extends Component<Props, State> {
                                             </div>
                                         </div>
                                         <div className="form-group">
-                                            <button type="submit"  className="btn btn-primary rounded submit p-3 px-5">
+                                            <button type="submit" className="btn btn-primary rounded submit p-3 px-5">
                                                 <span>Login</span>
                                             </button>
                                         </div>

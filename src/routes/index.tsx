@@ -1,7 +1,9 @@
-import Login from "../components/auth/Login";
+import Login from "../components/auth/Signin";
 import HomePage from "../layout/home-page";
 import CartLayout from "../components/cart-layout";
 import NotFound from "../components/workspace/not-found";
+import Signup from "../components/auth/Signup";
+import Signin from "../components/auth/Signin";
 
 // export const publicRouter = [    layout cũ
 //     { path:"/add", component: AddPhone, layout: undefined},
@@ -21,5 +23,7 @@ export const publicRouter = [
     { path:"/404", component: NotFound, layout: null},
     { path:"/login", component: Login, layout: null},
     { path:"/", component: HomePage, layout: null},
+    { path:"/signup", component: Signup, layout: null},
+    { path:"/signin", component: Signin, layout: null},
     { path:"/cart-page", component: CartLayout, layout: undefined}
 ]

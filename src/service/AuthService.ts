@@ -1,12 +1,15 @@
 import axios from "axios";
-import SignupForm from "../model/SignupForm";
 const API = "http://localhost:8080/api/auth";
 
 class AuthService {
-    login(username: string, password: string) {
-        return axios.post(API + "/signin", {username, password})
+    signin(username: string, password: string) {
+        const loginRequest ={
+            username,
+            password
+        }
+        return axios.post(API + "/signin", loginRequest)
             .then(response => {
-                    localStorage.setItem("user", JSON.stringify(response.data))
+                localStorage.setItem("user", JSON.stringify(response.data))
                 return response.data;
             })
     }
@@ -16,7 +19,12 @@ class AuthService {
     }
 
     signup(username: string, password: string, email: string) {
-        return axios.post(API + "/signup", {username, password, email});
+        const signUpRequest={
+            username,
+            password,
+            email
+        }
+        return axios.post(API + "/signup", signUpRequest);
     }
 
     getCurrentUser() {

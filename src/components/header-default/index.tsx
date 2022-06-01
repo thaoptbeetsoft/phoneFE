@@ -8,7 +8,7 @@ function HeaderDefault() {
                 <div className="top-left">
                   <ul className="list-main">
                     <li><i className="ti-headphone-alt" /> +060 (800) 801-582</li>
-                    <li><i className="ti-email" /> support@shophub.com</li>
+                    <li><i className="ti-email" /> thaopt@beetsoft.com.vn</li>
                   </ul>
                 </div>
               </div>
@@ -16,8 +16,8 @@ function HeaderDefault() {
                 <div className="right-content">
                   <ul className="list-main">
                     <li><i className="ti-location-pin" /> Địa chỉ</li>
-                    <li><i className="ti-user" /> <a href="#">Đăng kí</a></li>
-                    <li><i className="ti-power-off" /><a href="login.html#">Đăng nhập</a></li>
+                    <li><i className="ti-user" /> <a href="/signup">Đăng kí</a></li>
+                    <li><i className="ti-power-off" /><a href="/signin">Đăng nhập</a></li>
                   </ul>
                 </div>
               </div>

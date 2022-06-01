@@ -10,7 +10,6 @@ import Product from "../../components/product";
 import ShopServices from "../../components/shop-services";
 import SmallBanner from "../../components/small";
 import HeaderDefault from "../../components/header-default";
-
 function HomePage() {
     return ( 
         <>

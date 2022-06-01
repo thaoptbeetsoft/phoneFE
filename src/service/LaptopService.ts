@@ -19,4 +19,4 @@ class LaptopService {
     }
 }
 
-export default LaptopService;
+export default new LaptopService();

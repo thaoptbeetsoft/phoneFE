@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import { publicRouter } from './routes';
 import DefaultLayout from './components/workspace/default-layout/DefaultLayout';//layout cũ
-import LayoutDault from './layout/form-layout';
+import LayoutDault from './layout/add-phone-layout';
 function App() {
   return (
     <div>

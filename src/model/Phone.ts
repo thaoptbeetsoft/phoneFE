@@ -7,4 +7,6 @@ export default interface Phone {
     price?: number;
     priceOld?: number;
     img?: string;
+    type?: string;
+    old?: number
 }

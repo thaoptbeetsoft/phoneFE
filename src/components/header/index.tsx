@@ -15,10 +15,10 @@ function Header() {
                     <div className="col-lg-7 col-md-12 col-12">
                         <div className="right-content">
                             <ul className="list-main">
-                                <li><i className="ti-location-pin"></i> Store location</li>
+                                <li><i className="ti-location-pin"></i>Địa chỉ</li>
                                 <li><i className="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
-                                <li><i className="ti-user"></i> <a href="#">My account</a></li>
-                                <li><i className="ti-power-off"></i><a href="login.html#">Login</a></li>
+                                <li><i className="ti-user"></i> <a href="#">Tài khoản của tôi</a></li>
+                                <li><i className="ti-power-off"></i><a href="login.html#">Đăng nhập</a></li>
                             </ul>
                         </div>
                     </div>
@@ -47,13 +47,13 @@ function Header() {
                         <div className="search-bar-top">
                             <div className="search-bar">
                                 <select>
-                                    <option selected>All Category</option>
-                                    <option>watch</option>
-                                    <option>mobile</option>
-                                    <option>kid’s item</option>
+                                    <option selected>Thể loại</option>
+                                    <option>Điện thoại</option>
+                                    <option>Máy tính</option>
+                                    <option>Khác</option>
                                 </select>
                                 <form>
-                                    <input name="search" placeholder="Search Products Here....." type="search"/>
+                                    <input name="search" placeholder="Nhập từ khoá tìm kiếm..." type="search"/>
                                     <button className="btnn"><i className="ti-search"></i></button>
                                 </form>
                             </div>
@@ -112,22 +112,20 @@ function Header() {
                                     <div className="navbar-collapse">	
                                         <div className="nav-inner">	
                                             <ul className="nav main-menu menu navbar-nav">
-                                                <li className="active"><a href="##">Home</a></li>
-                                                <li><a href="#">Product</a></li>												
-                                                <li><a href="#">Service</a></li>
-                                                <li><a href="#">Shop<i className="ti-angle-down"></i><span className="new">New</span></a>
+                                                <li className="active"><a href="/">Trang chủ</a></li>
+                                                <li><a href="#">Sản phẩm hot</a></li>												
+                                                <li><a href="#">Sản phẩm mới</a></li>
+                                                <li><a href="#">Của hàng<i className="ti-angle-down"></i><span className="new">New</span></a>
                                                     <ul className="dropdown">
                                                         <li><a href="cart.html">Cart</a></li>
                                                         <li><a href="checkout.html">Checkout</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="#">Pages</a></li>									
                                                 <li><a href="#">Blog<i className="ti-angle-down"></i></a>
                                                     <ul className="dropdown">
-                                                        <li><a href="blog-single-sidebar.html">Blog Single Sidebar</a></li>
+                                                        <li><a href="blog-single-sidebar.html">Lịch ra mắt sản phẩm mới</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="contact.html">Contact Us</a></li>
                                             </ul>
                                         </div>
                                     </div>

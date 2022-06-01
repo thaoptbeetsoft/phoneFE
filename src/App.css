@@ -3769,6 +3769,7 @@ Version:1.0
 	color: #333;
 	font-weight: 700;
 	line-height: 27px;
+	text-align: center;
 }
 
 .shop.checkout .checkout-form p {
