@@ -12,11 +12,12 @@ const UploadFilebase: React.FC<IfirstChildProps>=({urlImage,updateUrlImage,produ
 
     const [imgUrl, setImgUrl] = useState(urlImage);
     const [progresspercent, setProgresspercent] = useState(0);
+    const [check, setCheck] = useState("false")
 
     const handleUploadFilebase = (e: any) => {
-        
+    
         e.preventDefault();//không cho tạo trang mới
-
+         
         const file = e.target[0]?.files[0];//lấy file từ input
 
         if (!file) return;//check xem file có tồn tại không
@@ -38,6 +39,7 @@ const UploadFilebase: React.FC<IfirstChildProps>=({urlImage,updateUrlImage,produ
                 getDownloadURL(uploadTask.snapshot.ref).then((urlFilebase) => {//lấy url từ filebase sau khi upload xong
                     setImgUrl(urlFilebase);
                 });
+                setCheck("false");
             }
             
         );
@@ -54,8 +56,11 @@ const UploadFilebase: React.FC<IfirstChildProps>=({urlImage,updateUrlImage,produ
     return (
         <div>
             <form onSubmit={handleUploadFilebase} className='form'>
-                <input type='file' />
-                <button type='submit'>Upload</button>
+                <input type='file' onChange={()=>setCheck("true")}/>
+                {
+                     check =="true" &&  <button type='submit'>Upload</button>
+                }
+              
             </form>
             {
                 !imgUrl &&

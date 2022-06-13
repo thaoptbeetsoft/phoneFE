@@ -20,7 +20,7 @@ const LoginPage: React.FC = () => {
 
   const updateUrlImage = (url: string) => {
     setUrlImage(url);
-}
+  }
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -29,24 +29,27 @@ const LoginPage: React.FC = () => {
 
   };
 
+
   const handleSubmit = () => {
-    const data = {
-      name: phone.name ,
-      company: company ,
-      chip: phone.chip ,
-      ram: phone.ram ,
+  
+    const data: Phone = {
+      name: phone.name,
+      company: company,
+      chip: phone.chip,
+      ram: phone.ram,
       price: phone.price,
       priceOld: phone.priceOld,
       img: urlImage,
       type: type,
       old: old
     }
-    setUrlImage("");
-    // PhoneService.create(data).then((response)=>{
-    //   alert("Ok");
-    // }).catch((e: Error) => {
-    //   console.log(e);
-    // });
+    PhoneService.create(data).then((response)=>{
+      setUrlImage("");//set lại dữ liệu cho UrlImage là rỗng
+      setPhone(initialPhoneState);
+      alert("Ok");
+    }).catch((e: Error) => {
+      console.log(e);
+    });
 
   }
 
@@ -60,10 +63,10 @@ const LoginPage: React.FC = () => {
                 <div className="bread-inner">
                   <ul className="bread-list">
                     <li><a href="/">Home<i className="ti-arrow-right" /></a></li>
-                    <li className="active"><a href="blog-single.html">Thêm sản phẩm mới</a></li>
+                    <li className="active"><a href="create-phone">Thêm điện thoại</a></li>
                   </ul>
                 </div>
-              </div>
+              </div>    
             </div>
           </div>
         </div>
@@ -153,7 +156,7 @@ const LoginPage: React.FC = () => {
                         </div>
                       </div>
                       <div className="col-12">
-                        <UploadFilebase urlImage={urlImage}  product={"phone"} updateUrlImage={updateUrlImage}/>
+                        <UploadFilebase urlImage={urlImage} product={"phone"} updateUrlImage={updateUrlImage} />
                       </div>
                       <div className="col-12">
                         <div className="button">

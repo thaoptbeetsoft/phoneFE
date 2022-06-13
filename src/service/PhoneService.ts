@@ -4,7 +4,7 @@ class PhoneService{
     findAll(){
         return httpCommon.get<Array<Phone>>("/phones");
     }
-    findById(id: string){
+    findById(id?: string){
         return httpCommon.get<Phone>(`/phones/${id}`);
     }
     create(phone: Phone){

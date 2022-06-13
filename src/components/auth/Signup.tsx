@@ -15,13 +15,18 @@ function Signup() {
         email: ""
     }
 
-    const validationSchema = () => {
-        return Yup.object().shape({
-            username: Yup.string().required("Không được để trống!"),
-            password: Yup.string().required("Không được để trống!"),
-            email: Yup.string().required("Không được để trống!")
-        });
-    }
+
+    const validationSchema = Yup.object().shape({
+        username: Yup.string()
+          .min(6, 'Too Short!')
+          .max(50, 'Too Long!')
+          .required('Required'),
+          password: Yup.string()
+          .min(10, 'Too Short!')
+          .max(50, 'Too Long!')
+          .required('Required'),
+        email: Yup.string().email('Invalid email').required('Required'),
+      });
 
     const handleSignup = (formValue: { username: string; password: string; email: string }) => {
         const { username, password, email } = formValue;

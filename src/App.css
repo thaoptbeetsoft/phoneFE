@@ -457,6 +457,7 @@ Version:1.0
 	padding-left: 0;
 }
 
+
 .header.shop .top-left .list-main li i {
 	display: inline-block;
 	margin-right: 4px;
@@ -1438,11 +1439,13 @@ Version:1.0
 .hero-slider .single-slider {
 	/*1900x700*/
 	height: auto;
-	background-image: url('https://swall.teahub.io/photos/small/70-706150_photo-wallpaper-edge-galaxy-samsung-samsung-samsung-samsung.jpg');
+	background-image: url('https://firebasestorage.googleapis.com/v0/b/microservice-a2f9b.appspot.com/o/banner%2Fhotsale-samsung-galaxy-s22-series-02-1.jpg?alt=media&token=6618eb2d-f528-4bd5-b02f-82bed5cc0419');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 510px;
+	height: 570px;
+	
+	margin: auto;
 }
 
 .hero-slider .text-inner {}
@@ -4265,7 +4268,7 @@ Version:1.0
 .pagination {
 	text-align: left;
 	margin: 50px 0 0 0;
-	display: block;
+	
 }
 
 .pagination.center {
@@ -5869,6 +5872,7 @@ Version:1.0
 	color: #fff;
 	text-decoration: underline;
 }
+
 
 /*=============================
 	End Footer CSS
